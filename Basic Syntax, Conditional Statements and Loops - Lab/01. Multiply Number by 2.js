@@ -1,5 +1,6 @@
-function multiplyBy2(myNum) {
-   
-    console.log(myNum * 2);
+function multiplyBy2(input) {
+ // first upload
+ // test
+    let hello = "hello";
 }
 multiplyBy2(5);

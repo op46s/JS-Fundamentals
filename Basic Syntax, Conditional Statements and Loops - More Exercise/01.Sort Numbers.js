@@ -10,6 +10,6 @@ function sortNumbers(numOne, numTwo, numThree) {
         console.log(numbers[i]);
       }
 
-}
+} 
 sortNumbers(2, 1, 3);
 //sortNumbers(-2, 1, 3);

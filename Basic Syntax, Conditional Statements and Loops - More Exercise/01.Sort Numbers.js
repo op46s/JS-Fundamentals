@@ -8,7 +8,7 @@ function sortNumbers(numOne, numTwo, numThree) {
 
     for (let i = 0; i < numbers.length; i++) {
         console.log(numbers[i]);
-      }
+      } 
 
 } 
 sortNumbers(2, 1, 3);

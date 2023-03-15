@@ -20,8 +20,8 @@ function nextDay(year, month, day) {
     }
     console.log(`${year}-${month}-${day}`);
 }
-nextDay(2016, 2, 29);
-//nextDay(2020, 3, 24);
+//nextDay(2016, 2, 29);
+nextDay(2020, 3, 24);
 
 
 function nextDay(year, month, day) {

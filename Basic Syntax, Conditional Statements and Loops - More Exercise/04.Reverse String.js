@@ -1,6 +1,5 @@
 function reverseString(word) {
 
-    let newArray = word.split('').reverse().join('');
-    console.log(newArray);
+    console.log(word.split('').reverse().join(''));
 }
-reverseString('SoftUni')
+reverseString('SoftUni');

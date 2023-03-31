@@ -1,29 +1,23 @@
 function maxSequence(arr) {
 
-    let newArr = [];
-    let counter = 0;
+    let longestArr = [];
 
-    for (let i=0; i<arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
+        let currentSequence = [arr[i]];
 
-        
+        for (j = i + 1; j < arr.length; j++) {
 
-        if (arr[i] == arr[i+1]) {
-            counter++;
-            newArr.push(arr[i]);
+            if (arr[i] === arr[j]) {
+                currentSequence.push(arr[j]);
+            } else {
+                break;
+            }
         }
-
-
-
-
+        if (currentSequence.length > longestArr.length) {
+            longestArr = currentSequence;
+        }
     }
-
-    
-
-
-
-
-
-    console.log(newArr);
+    console.log(longestArr.join(' '));
 }
 maxSequence([2, 1, 1, 2, 3, 3, 2, 2, 2, 1]);
 //maxSequence([1, 1, 1, 2, 3, 1, 3, 3]);

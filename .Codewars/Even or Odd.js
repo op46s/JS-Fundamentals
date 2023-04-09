@@ -4,4 +4,4 @@ function evenOrOdd(number) {
     number % 2 === 0 ? result = 'Even' : result = 'Odd';
     console.log(result);
 }
-evenOrOdd(1)
+evenOrOdd(2)

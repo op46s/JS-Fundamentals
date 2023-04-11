@@ -1,11 +1,11 @@
 function printerError(s) {
-        let errorCounter = 0;
-        let inputToArray = s.split('');
-        for (let i=0; i<inputToArray.length; i++) {
-          if (inputToArray[i].charCodeAt(0) < 97 || inputToArray[i].charCodeAt(0) > 109) {
-              errorCounter++;
-          }
-        }
-        return `${errorCounter}/${inputToArray.length}`;
-      }
-      printerError('aaabbbbhaijjjm')
+  let errorCounter = 0;
+  let toArray = s.split('');
+  for (let i = 0; i < toArray.length; i++) {
+    if (toArray[i] > 'n') {
+      errorCounter++;
+    }
+  }
+  console.log(`${errorCounter}/${toArray.length}`);
+}
+printerError('aaabbbbhaijjjm')

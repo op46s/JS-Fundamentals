@@ -1,6 +1,4 @@
 function printerError(s) {
-  
-    function printerError(s) {
         let errorCounter = 0;
         let inputToArray = s.split('');
         for (let i=0; i<inputToArray.length; i++) {
@@ -11,6 +9,3 @@ function printerError(s) {
         return `${errorCounter}/${inputToArray.length}`;
       }
       printerError('aaabbbbhaijjjm')
-}
-printerError('a');
-

@@ -1,15 +1,16 @@
 function diaboloFour(rooms) {
 
-    let roomsToArr = rooms.toString().replaceAll('|', ',').replaceAll(' ', ',').split(',');
+    //let roomsToArr = rooms.toString().replaceAll('|', ',').replaceAll(' ', ',').split(',');
+    let roomsToArr = rooms.toString().replace(/\|/g, ' ').split(' ');
 
     let healthBar = 100;
     let coins = 0;
     let bestRoom = 1;
 
-    for (let i = 0; i<roomsToArr.length; i++) {
+    for (let i = 0; i < roomsToArr.length; i++) {
 
         let unit = roomsToArr[i];
-        let amount = Number(roomsToArr[i+1]);
+        let amount = Number(roomsToArr[i + 1]);
 
         // Potion business logic.
         if (unit === 'potion') {
@@ -27,7 +28,7 @@ function diaboloFour(rooms) {
 
         // Coins Business Logic
         else if (unit === 'chest') {
-            coins+=amount;
+            coins += amount;
             console.log(`You found ${amount} coins.`);
         } else {
             healthBar -= amount;
@@ -51,4 +52,4 @@ function diaboloFour(rooms) {
     }
 }
 diaboloFour(["rat 10|bat 20|potion 10|rat 10|chest 100|boss 70|chest 1000"]);
-//diaboloFour(["cat 10|potion 30|orc 10|chest 10|snake 25|chest 110"]);
+diaboloFour(["cat 10|potion 30|orc 10|chest 10|snake 25|chest 110"]);

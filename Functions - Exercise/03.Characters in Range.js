@@ -1,5 +1,11 @@
 function charsInRange(a, b) {
 
+    let myMaxNumber = (a, b) => Math.max(a, b)
+    let myMinNumber = (a, b) => Math.min(a, b)
+    let convertASCII = (aChar) => aChar.charCodeAt(0)
+    let concatenate = (a) => a = ' ';
+    let convertASCIINumberToLetter = (num) => String.fromCharCode(num)
+
     let myCharA = convertASCII(a)
     let myCharB = convertASCII(b)
 
@@ -7,32 +13,10 @@ function charsInRange(a, b) {
     let mySecond = myMaxNumber(myCharA, myCharB);
 
     let result = '';
-    for (let i=myFirst+1; i<mySecond; i++) {
+    for (let i = myFirst + 1; i < mySecond; i++) {
         result += convertASCIINumberToLetter(i) + concatenate();
     }
-
     console.log(result);
-
-    function myMaxNumber(a, b) {
-        return Math.max(a, b)
-    }
-    
-    function myMinNumber(a, b) {
-        return Math.min(a, b)
-    }
-    
-    function convertASCII(aChar) {
-        return aChar.charCodeAt(0)
-    }
-    
-    function convertASCIINumberToLetter(num) {
-        return String.fromCharCode(num)
-    }
-     
-    function concatenate(string) {
-        return ' ';
-    }
-
 }
 charsInRange('a', 'd');
 charsInRange('#', ':');

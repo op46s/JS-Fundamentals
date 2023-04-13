@@ -17,6 +17,6 @@ function softUni(inputArr) {
     }
     console.log(`Time needed: ${totalHours}h.`);
 }
-softUni(['5','6','4','20']);
+//softUni(['5','6','4','20']);
 //softUni(['1','2','3','45']);
 //softUni(['3','2','5','40']);

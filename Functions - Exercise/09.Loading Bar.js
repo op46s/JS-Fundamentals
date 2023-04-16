@@ -8,6 +8,6 @@ function loadingBar(n) {
         console.log('Still loading...');
     }
 }
-loadingBar(90);
+loadingBar(30);
 //loadingBar(50);
 //loadingBar(100);

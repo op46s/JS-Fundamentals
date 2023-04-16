@@ -9,5 +9,5 @@ function loadingBar(n) {
     }
 }
 loadingBar(30);
-//loadingBar(50);
+//loadingBar(50
 //loadingBar(100);

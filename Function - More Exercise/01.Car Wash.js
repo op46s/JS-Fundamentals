@@ -23,5 +23,5 @@ function carWash(arr) {
     console.log(`The car is ${result.toFixed(2)}% clean.`);
 }
 carWash(['soap', 'soap', 'vacuum cleaner', 'mud', 'soap', 'water']);
-//carWash(["soap", "water", "mud", "mud", "water", "mud", "vacuum cleaner"]);
+carWash(["soap", "water", "mud", "mud", "water", "mud", "vacuum cleaner"]);
   

@@ -9,12 +9,8 @@ var reduce = function(nums, fn, init) {
             init = result;
             
         }
-       
         console.log(result);
     }
-
-
-   
 };
 //reduce([1,2,3,4], function sum(acc, curr) { return acc + curr; }, 0);
 reduce([1,2,3,4], function sum(acc, curr) { return acc + curr * curr; }, 100);

@@ -4,5 +4,5 @@ function listOfProducts(products) {
     //let sortedAndNumbered = products.sort().map((a, i) => (i+1)+'.'+a);
     console.log(sortedAndNumbered.join('\n'));
 }
-listOfProducts(['Potatoes', 'Tomatoes', 'Onions', 'Apples', 322]);
+listOfProducts(['Potatoes', 'Tomatoes', 'Onions', 'Apples']);
 //listOfProducts(['Watermelon', 'Banana', 'Apples']);

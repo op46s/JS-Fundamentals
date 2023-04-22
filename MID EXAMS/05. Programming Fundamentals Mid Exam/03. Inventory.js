@@ -5,6 +5,7 @@ function inventory(arr) {
     while (craftChecker != 'Craft!') {
 
         let currentElements = craftChecker.replace(' -', '').split(' ');
+        console.log('CUR ELEM', currentElements);
 
         // COLLECT logic
         if (currentElements[0] == 'Collect') {
@@ -37,6 +38,7 @@ function inventory(arr) {
         // COMBINE Logic
         if (currentElements[0] == 'Combine') {
             currentElements = craftChecker.replace(' - ', ':').split(':')
+            console.log('EWQEWEWQE',currentElements);
             if (myList.toString().includes(currentElements[1])) {
                 myList.splice(myList.indexOf(currentElements[1]), 1, currentElements[1], currentElements[2]);
 

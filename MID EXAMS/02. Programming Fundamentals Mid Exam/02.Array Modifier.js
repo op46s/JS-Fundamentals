@@ -4,7 +4,7 @@ function arrayModifier(arr) {
     let elements = arr.shift();
     let newArr;
 
-    while(elements !== 'end') {
+    while(elements.toLowerCase() !== 'end') {
         let commands = elements.split(' ');
 
         let index1 = Number(commands[1]);
@@ -24,13 +24,13 @@ function arrayModifier(arr) {
             numbersArr.splice(index1, 1, multiplied);
             break;
             case 'decrease' : 
-            newArr = numbersArr.map(a => a-1);
+            newArr = numbersArr.map(el => el - 1);
             numbersArr = newArr;
             break;
         }
         elements = arr.shift()
     }
-console.log(newArr.join(', '));
+console.log(numbersArr.join(', '));
 }
 // arrayModifier([
 //     '23 -2 321 87 42 90 -123',

@@ -1,34 +1,31 @@
 function counterStrike(arr) {
 
     let energy = Number(arr.shift());
-    let distance = arr.shift();
-    let wins = 0;
+    let eob = false;
+    let winCounter = 0;
 
-        while(distance != "End of battle") { 
-
-            
-            
-            energy -= Number(distance);
-            wins++;
-
-            if (wins % 3 == 0) {
-                energy += wins;
-            }
-            
-            if (energy == 0) {
-                distance = arr.shift();
-                if (distance != undefined) {
-                    console.log(`Not enough energy! Game ends with ${wins} won battles and ${energy} energy`);
-                    return;
-                } else {
-                    console.log(`Won battles: ${wins}. Energy left: ${energy}`);
-                    return;
-                }
-                
-            }
-            distance = arr.shift();
+    for (let i = 0; i < arr.length; i++) {
+        let distance = arr[i];
+        if (distance === 'End of battle') {
+            eob = true;
+            break;
         }
-        console.log(`Won battles: ${wins}. Energy left: ${energy}`);
+        if (energy >= Number(distance)) {
+            winCounter++;
+            energy -= Number(distance);
+        } else {
+            console.log(`Not enough energy! Game ends with ${winCounter} won battles and ${energy} energy`);
+            return;
+        }
+
+        if (winCounter % 3 == 0) {
+            energy += winCounter;
+        }
+    }
+
+    if (eob || energy >= 0) {
+        console.log(`Won battles: ${winCounter}. Energy left: ${energy}`);
+    }
 }
 counterStrike(["100", "10", "10", "10", "1", "2", "3", "73", "10"]);
 counterStrike(["200", "54", "14", "28", "13", "End of battle"]);

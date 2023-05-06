@@ -23,7 +23,7 @@ function blackFlag(arr) {
         
         console.log(`Collected only ${percentage.toFixed(2)}% of the plunder.`)
     }
-}
+} 
 // blackFlag(["5",
 //             "40",
 //             "100"

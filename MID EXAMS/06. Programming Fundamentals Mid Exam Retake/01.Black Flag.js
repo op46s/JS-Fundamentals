@@ -4,7 +4,7 @@ function blackFlag(arr) {
     let dailyPlunder = Number(arr[1]); 
     let expectedPlunder = Number(arr[2]); 
     let totalPlunderGathered = 0;
-    
+
 
     for (let i=1; i<=days; i++) {
         totalPlunderGathered+=dailyPlunder;
@@ -31,4 +31,4 @@ function blackFlag(arr) {
 blackFlag(["10",
             "20",
             "380"
-])
+]);

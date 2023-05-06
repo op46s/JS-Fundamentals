@@ -2,39 +2,27 @@ function heartDelivery(input) {
 
     let neighborhood = input.shift().split('@').map(Number);
     let jumps = input.shift();
-    let lastPosition = 0;
     let failedCounter = 0;
-    let counter = 0;
-    
+    let lastPosition = 0;
 
     while (jumps != 'Love!') {
-        counter++;
         let jumpLengths = jumps.split(' ');
-        let length = Number(jumpLengths[1]);
+        let index = Number(jumpLengths[1]);
+        index+=lastPosition;
         
-        if (counter == 1) {
-            length = Number(jumpLengths[1])
+        if (index >= neighborhood.length) {
+            index = 0;
+        }
+        if (neighborhood[index] === 0){
+            console.log(`Place ${index} already had Valentine's day.`)
         } else {
-            length+=lastPosition;
-        }
-
-        if (length > neighborhood.length) {
-            length = 0;
-        }
-       
-        for (let i=length; i<neighborhood.length; i++) {
-            if (neighborhood[length] == 0) {
-                console.log(`Place ${length} already had Valentine's day.`);
-                break;
-            } else {
-                neighborhood.splice(i, 1, neighborhood[length]-2);
-                if (neighborhood[length] == 0) {
-                    console.log(`Place ${length} has Valentine's day.`);
-                }
-                break;
+            neighborhood[index] -= 2
+            if (neighborhood[index] === 0) {
+                console.log(`Place ${index} has Valentine's day.`)
             }
         }
-        lastPosition = length;
+       
+        lastPosition = index;
         jumps = input.shift();
     }
 
@@ -43,9 +31,6 @@ function heartDelivery(input) {
             failedCounter++;
         } 
     }
-
-   
-
     console.log(`Cupid's last position was ${lastPosition}.`)
     if (failedCounter == 0) {
         console.log('Mission was successful.')
@@ -58,6 +43,7 @@ heartDelivery(["10@10@10@2",
                 "Jump 2",
                 "Love!"
 ]);
+console.log('.......................................')
 heartDelivery(["2@4@2",
                 "Jump 2",
                 "Jump 2",

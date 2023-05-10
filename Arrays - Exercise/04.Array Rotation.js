@@ -6,6 +6,7 @@ function arrayRotation(inputArray, rotations) {
         }
         
     console.log(inputArray.join(' '));
+ 
 }
 arrayRotation([51, 47, 32, 61, 21], 2);
 arrayRotation([32, 21, 61, 1], 4);

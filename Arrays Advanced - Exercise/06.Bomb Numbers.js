@@ -5,10 +5,6 @@ function bombNumbers(myArr, special) {
     let bNum = myArr.indexOf(bombNumber);
     let detonatorCount = 0;
 
-    // console.log('Bomb Number -', bombNumber);
-    // console.log('Power -', power);
-    // console.log('Bomb Number Index -', bNum)
-
     for (const el of myArr) {
         if (el == bombNumber) {
             detonatorCount++;

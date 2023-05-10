@@ -7,8 +7,7 @@ function distinctArrays(arr) {
         newArr.push(arr[i]);
       }
     }
-    console.log(newArr);
- 
+    console.log(newArr.join(' '));
 }
 distinctArrays([1, 2, 3, 4]);
 distinctArrays([7, 8, 9, 7, 2, 3, 4, 1, 2]);

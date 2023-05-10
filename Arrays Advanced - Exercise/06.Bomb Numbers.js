@@ -7,11 +7,18 @@ function bombNumbers(myArr, special) {
             let checker = myArr[i];
                 if (checker === bombNumber) {
 
-                    let startIndex = Math.max(0, i-power)
-                    let deleteCount = power * 2 + 1
+                    let startIndex = i-power
+                    let deleteCount = power * 2 + 1             
+                        if (startIndex < 0) {
+                            deleteCount += startIndex;
+                            startIndex = 0;
+                        }
+                    
                     myArr.splice(startIndex, deleteCount)
+                    i = i - power - 1
                 }
-        }        
+        }
+           
         console.log(myArr.reduce((a, b) => a + b, 0));
 }
 bombNumbers([1, 2, 2, 4, 2, 2, 2, 9], [4, 2]);

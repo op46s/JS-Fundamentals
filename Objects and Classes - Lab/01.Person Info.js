@@ -1,16 +1,17 @@
 function personInfo(fName, lName, age) {
 
     let person = {
-        // firstName: fName,
-        // lastName: lName,
-        // age: age
+        firstName: fName,
+        lastName: lName,
+        age: age
     }
-    person.firstName = fName;
-    person.lastName = lName;
-    person.age = age
-   console.log(person);
+    return person;
 }
 personInfo("Peter", 
 "Pan",
 "20"
-)
+);
+personInfo("George", 
+"Smith",
+"18"
+);

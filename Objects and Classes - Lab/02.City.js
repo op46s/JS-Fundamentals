@@ -1,12 +1,11 @@
 function city(obj) {
 
-    // for (let key of Object.keys(obj)) {
-    //     console.log(key+' -> '+ obj[key]);
-    // }
-    
-    for (let [key, value] of Object.entries(obj)) {
-        console.log(key+' -> '+value)
-    }
+    let objToArr = Object.keys(obj);
+        for(let i=0; i<objToArr.length; i++) {
+            let keys = objToArr[i];
+            let values = obj[keys]
+            console.log(`${keys} -> ${values}`)
+        }
 }
 city({
     name: "Sofia",
@@ -14,4 +13,11 @@ city({
     population: 1238438,
     country: "Bulgaria",
     postCode: "1000"
-    })
+});
+city({
+    name: "Plovdiv",
+    area: 389,
+    population: 1162358,
+    country: "Bulgaria",
+    postCode: "4000"
+});

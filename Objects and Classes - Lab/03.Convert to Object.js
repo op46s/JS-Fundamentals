@@ -1,9 +1,11 @@
-function convertToObject(myObj) {
+function convertToObject(str) {
 
-    let person = JSON.parse(myObj);
-    for (let key of Object.keys(person)) {
-        console.log(key+': '+person[key]);
-    }  
+    let myObject = JSON.parse(str);
+    let objKeys = Object.keys(myObject);
+
+    for (let keys of objKeys) {
+        console.log(`${keys}: ${myObject[keys]}`)
+    }
 }
 convertToObject('{"name": "George", "age": 40, "town": "Sofia"}');
 convertToObject('{"name": "Peter", "age": 35, "town": "Plovdiv"}');

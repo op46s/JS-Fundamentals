@@ -13,6 +13,7 @@ function cats(arr) {
     for (let i=0; i<arr.length; i++) {
         let [name, age] = arr[i].split(' ');
         let addCat = new Cat(name, age);
+        console.table(addCat);
         addCat.meow()
     }
 }

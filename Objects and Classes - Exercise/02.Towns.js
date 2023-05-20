@@ -6,7 +6,6 @@ function towns(arr) {
     collectTownData.push({
       town: town,
       latitude: Number(latitude).toFixed(2),
-
       longitude: Number(longitude).toFixed(2),
     });
   }

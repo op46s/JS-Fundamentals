@@ -18,7 +18,7 @@ function memoryGame(input) {
             console.log('Invalid input! Adding additional elements to the board');
         } else {
 
-            if (matchingElements(sequence[index1], sequence[index2], sequence)) {
+            if (sequence[index1] == sequence[index2]) {
                 let element = sequence[index1];
                 const sortedIndices = [index1, index2].sort((a, b) => b - a);
                 sortedIndices.forEach((index) => {
@@ -30,22 +30,13 @@ function memoryGame(input) {
             }
 
         }
-        function matchingElements(el1, el2, array) {
-            if (array[el1] == array[el2]) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
         function checkValidIndex(arr, seq) {
-            if (arr[0] === arr[1] || arr[0] < 0 || arr[1] < 0 || arr[0] > seq.length || arr[1] > seq.length) {
+            if (arr[0] === arr[1] || arr[0] < 0 || arr[1] < 0 || arr[0] >= seq.length || arr[1] >= seq.length) {
                 return true;
             } else {
                 return false;
             }
         }
-
         elements = input.shift();
 
         if (sequence.length === 0) {

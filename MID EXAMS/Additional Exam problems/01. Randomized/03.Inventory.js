@@ -21,16 +21,20 @@ function inventory(input) {
         }
 
         if (command === 'Combine Items') {
-            let
-
+            let [oldItem, newItem] = item.split(':');
+            if (journal.includes(oldItem)) {
+                journal.splice(journal.indexOf(oldItem), 1, oldItem, newItem)
+            }
         }
 
-
-
+        if (command === 'Renew') {
+            if (journal.includes(item)) {
+                journal.splice(journal.indexOf(item), 1);
+                journal.push(item);
+            }
+        }
     }
-
     console.log(journal.join(', '));
-
 }
 // inventory([
 //     'Iron, Wood, Sword',

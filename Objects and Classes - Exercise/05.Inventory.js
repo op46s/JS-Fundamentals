@@ -18,6 +18,8 @@ function inventory(input) {
         sortedByLevel.push(heroData)
 
     }
+
+    console.log(sortedByLevel);
     sortArray(sortedByLevel);
 
     for (let i = 0; i < sortedByLevel.length; i++) {
